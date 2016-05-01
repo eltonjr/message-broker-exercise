@@ -2,5 +2,9 @@ module.exports = {
 	host: 'localhost',
 	exchange: 'amqp.topic',
 	queue: 'store.orders',
-	route: '#'
+	routes: {
+		consumer: '#',
+		online: 'orders.online',
+		retail: 'orders.retail'
+	}
 };
