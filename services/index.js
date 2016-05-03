@@ -1,4 +1,3 @@
-var amqp = require('amqp');
 var rabbit = require('./rabbit/util');
 var services = require('./impl/services');
 
@@ -21,7 +20,7 @@ rabbit.connect(function(connection, exchange) {
 			break;
 
 		case 'online':
-			services.retail(exchange);
+			services.online(exchange);
 			break;
 
 		default:

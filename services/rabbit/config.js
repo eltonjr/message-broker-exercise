@@ -3,7 +3,7 @@ module.exports = {
 	exchange: 'amqp.topic',
 	queue: 'store.orders',
 	routes: {
-		consumer: '#',
+		consumer: 'orders.*',
 		online: 'orders.online',
 		retail: 'orders.retail'
 	}
