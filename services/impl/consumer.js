@@ -41,24 +41,4 @@ module.exports = {
 		});
 	},
 
-	online: function(exchange) {
-		(function loop(){
-			setTimeout(function() {
-				console.log('Vai emitir mensagem para broker');
-				exchange.publish(config.routes.online, 'Banana', { contentType: 'text/plain' });
-				loop();
-			}, 3000);
-		})();
-	},
-
-	retail: function(exchange) {
-		(function loop(){
-			setTimeout(function() {
-				console.log('Vai emitir mensagem para broker');
-				exchange.publish(config.routes.retail, 'Macaco', { contentType: 'text/plain' });
-				loop();
-			}, 4000);
-		})();
-	}
-
 };
