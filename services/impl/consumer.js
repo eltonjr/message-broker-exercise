@@ -9,7 +9,7 @@ module.exports = {
 
 	consumer: function(connection, exchange) {
 		console.log('⚪ Trying to connect with queue ' + config.queue);
-		connection.queue(config.queue, function (q) {
+		connection.queue(config.queue, config.options, function (q) {
 			console.log('✔ Connection done!\n');
 
 			// Catch all messages
